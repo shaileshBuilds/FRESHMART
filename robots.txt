@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /pages/checkout.html
+Disallow: /pages/dashboard.html
+Disallow: /pages/order-success.html
+Sitemap: https://YOUR-DOMAIN.example/sitemap.xml

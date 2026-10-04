@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shop — FRESHMART</title>
+  <meta name="description" content="FRESHMART: farm-fresh groceries, delivered to your door.">
+  <meta name="theme-color" content="#176B45">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FRESHMART">
+  <meta property="og:title" content="Shop — FRESHMART">
+  <meta property="og:description" content="Farm-fresh groceries, delivered to your door.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { primary:'#176B45', secondary:'#B7E46A', surface:'#F8FAF5', dark:'#17251D', muted:'#758078' },
+      fontFamily: { sans:['Inter','system-ui','sans-serif'], display:['Plus Jakarta Sans','Inter','sans-serif'] }
+    } } };
+  </script>
+  <script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="bg-surface text-dark font-sans antialiased" data-root="../">
+  <div data-component="header"></div>
+  <main class="container-fm section">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>/</span><span>Shop</span></nav>
+    <div id="shop-heading"></div>
+    <div id="shop-root" class="shop-layout">
+      <aside id="filters" class="filters" aria-label="Product filters"></aside>
+      <div id="f-overlay" class="f-overlay" data-sf="close"></div>
+      <section>
+        <div class="toolbar">
+          <button type="button" class="btn btn-outline btn-sm filter-open" data-sf="open"><i data-lucide="sliders-horizontal" class="w-4 h-4"></i>Filters</button>
+          <p id="grid-status" class="text-muted text-sm" aria-live="polite"></p>
+          <label class="sort-label">Sort by <select id="sort"></select></label>
+          <div class="view-toggle" role="group" aria-label="View">
+            <button type="button" data-sf="view" data-v="grid" aria-label="Grid view"><i data-lucide="layout-grid" class="w-4 h-4"></i></button>
+            <button type="button" data-sf="view" data-v="list" aria-label="List view"><i data-lucide="list" class="w-4 h-4"></i></button>
+          </div>
+        </div>
+        <div id="active-chips" class="active-chips"></div>
+        <div id="product-grid" class="product-grid"></div>
+        <nav id="pager" class="pager" aria-label="Pagination"></nav>
+      </section>
+    </div>
+  </main>
+  <div data-component="footer"></div>
+  <div id="toast-root" aria-live="polite"></div>
+  <script src="../js/products.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/shop.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
